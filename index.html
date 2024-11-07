@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>What Is Your Spirit Animal? — Survey</title>
+  </head>
+  <body>
+    <main>
+      <div class="main-block">
+        <header class="form-information">
+          <h1 class="title">Discover Your Spirit Animal!</h1>
+          <p class="description">
+            Answer a few questions to see which animal best matches your
+            personality.
+          </p>
+        </header>
+        <form action="#" id="spirit-animal-survey-form">
+          <label for="name" id="name-label">What's your name?</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="John Doe"
+            required
+          />
+          <br />
+
+          <label for="outdoors-hours" id="outdoors-hours-label"
+            >On average, how many hours do you spend outdoors everyday?</label
+          >
+          <input
+            type="number"
+            name="outdoors-hours"
+            id="outdoors-hours"
+            min="0"
+            step="1"
+            placeholder="6"
+            required
+          />
+          <br />
+          <label for="dropdown" id="dropdown-label"
+            >What's your favorite time of day?</label
+          >
+          <select name="dropdown" id="dropdown">
+            <option value="morning">Morning</option>
+            <option value="afternoon">Afternoon</option>
+            <option value="evening">Evening</option>
+            <option value="midnight">Midnight</option>
+          </select>
+          <br />
+          <fieldset form="spirit-animal-survey-form">
+            <legend>What type of environment do you prefer?</legend>
+            <input type="radio" name="gender" value="forest" id="forest" />
+            <label for="forest">Forest</label><br />
+            <input type="radio" name="gender" value="ocean" id="ocean" />
+            <label for="ocean">Ocean</label><br />
+            <input type="radio" name="gender" value="desert" id="desert" />
+            <label for="desert">Desert</label><br />
+            <input
+              type="radio"
+              name="gender"
+              value="mountains"
+              id="mountains"
+            />
+            <label for="mountains">Mountains</label><br />
+          </fieldset>
+          <br />
+
+          <fieldset form="spirit-animal-survey-form">
+            <legend>
+              What qualities best describe you? (Select all that apply)
+            </legend>
+
+            <input type="checkbox" name="qualities" id="friendly" />
+            <label for="friendly">Friendly</label><br />
+
+            <input type="checkbox" name="qualities" id="independent" />
+            <label for="independent">Independent</label><br />
+
+            <input type="checkbox" name="qualities" id="curious" />
+            <label for="curious">Curious</label><br />
+
+            <input type="checkbox" name="qualities" id="loyal" />
+            <label for="loyal">Loyal</label><br />
+
+            <input type="checkbox" name="qualities" id="playful" />
+            <label for="playful">Playful</label><br />
+
+            <input type="checkbox" name="qualities" id="quiet" />
+            <label for="quiet">Quiet</label><br />
+
+            <input type="checkbox" name="qualities" id="bold" />
+            <label for="bold">Bold</label><br />
+          </fieldset>
+
+          <label for="perfect-day"
+            >Describe your perfect day in a few sentences.</label
+          ><br />
+          <textarea name="perfect-day" id="perfect-day"></textarea>
+          <br />
+
+          <label for="email" id="email-label"
+            >Enter your email to get your personalized animal match!</label
+          >
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="johndoe@example.com"
+            required
+          />
+          <br />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

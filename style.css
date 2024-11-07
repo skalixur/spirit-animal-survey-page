@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.main-block {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.form-information,
+#spirit-animal-survey-form {
+  width: 50vw;
+}
+
+.form-information {
+  text-align: center;
+}
