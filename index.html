@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>What Is Your Spirit Animal? — Survey</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
   </head>
   <body>
     <main>
       <div class="main-block">
         <header class="form-information">
-          <h1 class="title">Discover Your Spirit Animal!</h1>
+          <h1 class="title">
+            Discover <span class="emphasized">Your</span> Spirit Animal
+          </h1>
           <p class="description">
             Answer a few questions to see which animal best matches your
             personality.
@@ -23,9 +28,9 @@
             name="name"
             id="name"
             placeholder="John Doe"
+            autocomplete="off"
             required
           />
-          <br />
 
           <label for="outdoors-hours" id="outdoors-hours-label"
             >On average, how many hours do you spend outdoors everyday?</label
@@ -34,72 +39,79 @@
             type="number"
             name="outdoors-hours"
             id="outdoors-hours"
-            min="0"
+            min="1"
+            max="24"
             step="1"
             placeholder="6"
+            autocomplete="off"
             required
           />
-          <br />
           <label for="dropdown" id="dropdown-label"
             >What's your favorite time of day?</label
           >
-          <select name="dropdown" id="dropdown">
-            <option value="morning">Morning</option>
-            <option value="afternoon">Afternoon</option>
-            <option value="evening">Evening</option>
-            <option value="midnight">Midnight</option>
+          <select name="dropdown" id="dropdown" required>
+            <option value="" selected disabled>Please select</option>
+            <option value="morning" required>Morning</option>
+            <option value="afternoon" required>Afternoon</option>
+            <option value="evening" required>Evening</option>
+            <option value="midnight" required>Midnight</option>
           </select>
-          <br />
           <fieldset form="spirit-animal-survey-form">
             <legend>What type of environment do you prefer?</legend>
-            <input type="radio" name="gender" value="forest" id="forest" />
-            <label for="forest">Forest</label><br />
-            <input type="radio" name="gender" value="ocean" id="ocean" />
-            <label for="ocean">Ocean</label><br />
-            <input type="radio" name="gender" value="desert" id="desert" />
-            <label for="desert">Desert</label><br />
             <input
               type="radio"
-              name="gender"
+              name="environment"
+              value="forest"
+              id="forest"
+              required
+            />
+            <label for="forest">Forest</label><br />
+            <input
+              type="radio"
+              name="environment"
+              value="ocean"
+              id="ocean"
+              required
+            />
+            <label for="ocean">Ocean</label><br />
+            <input
+              type="radio"
+              name="environment"
               value="mountains"
               id="mountains"
+              required
             />
             <label for="mountains">Mountains</label><br />
           </fieldset>
-          <br />
 
           <fieldset form="spirit-animal-survey-form">
             <legend>
               What qualities best describe you? (Select all that apply)
             </legend>
 
-            <input type="checkbox" name="qualities" id="friendly" />
+            <input type="checkbox" name="qualities" id="friendly" required />
             <label for="friendly">Friendly</label><br />
 
-            <input type="checkbox" name="qualities" id="independent" />
+            <input type="checkbox" name="qualities" id="independent" required />
             <label for="independent">Independent</label><br />
 
-            <input type="checkbox" name="qualities" id="curious" />
+            <input type="checkbox" name="qualities" id="curious" required />
             <label for="curious">Curious</label><br />
 
-            <input type="checkbox" name="qualities" id="loyal" />
+            <input type="checkbox" name="qualities" id="loyal" required />
             <label for="loyal">Loyal</label><br />
 
-            <input type="checkbox" name="qualities" id="playful" />
+            <input type="checkbox" name="qualities" id="playful" required />
             <label for="playful">Playful</label><br />
 
-            <input type="checkbox" name="qualities" id="quiet" />
+            <input type="checkbox" name="qualities" id="quiet" required />
             <label for="quiet">Quiet</label><br />
-
-            <input type="checkbox" name="qualities" id="bold" />
-            <label for="bold">Bold</label><br />
           </fieldset>
 
           <label for="perfect-day"
             >Describe your perfect day in a few sentences.</label
-          ><br />
-          <textarea name="perfect-day" id="perfect-day"></textarea>
-          <br />
+          >
+          <textarea rows="2" name="perfect-day" id="perfect-day"></textarea>
 
           <label for="email" id="email-label"
             >Enter your email to get your personalized animal match!</label
@@ -111,7 +123,6 @@
             placeholder="johndoe@example.com"
             required
           />
-          <br />
           <button type="submit">Submit</button>
         </form>
       </div>

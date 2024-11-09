@@ -1,26 +1,118 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Poppins';
 }
 
 body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: 100%;
+  overflow-x: hidden;
+  --accent-color: #ff6545;
+}
+
+.title,
+.description {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.emphasized {
+  font-size: 3rem;
+  text-transform: uppercase;
 }
 
 .main-block {
   display: flex;
   justify-content: center;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
+  background-image: url('./assets/img/bg.jpg');
+  background-size: cover;
+  background-repeat: none;
+  background-position: center;
+  position: relative;
+  color: white;
+}
+
+.main-block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: inherit;
+  background-position: right;
+  background-attachment: fixed;
+  filter: blur(20px);
+  z-index: 1;
+  pointer-events: none;
 }
 
 .form-information,
 #spirit-animal-survey-form {
+  padding: 20px;
+  z-index: 2;
+  height: 100vh;
   width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .form-information {
   text-align: center;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+}
+
+#spirit-animal-survey-form {
+  /* padding: 20px; */
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+textarea {
+  min-height: 1rem;
+}
+
+fieldset {
+  padding-left: 5px;
+}
+
+legend,
+label {
+  font-weight: 500;
+
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+fieldset label {
+  font-weight: light;
+}
+
+input,
+textarea {
+  border: var(--accent-color) 2px solid;
+  border-style: none none solid none;
+  color: white;
+
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+}
+
+button[type='submit'] {
+  font-weight: bold;
+  background-color: var(--accent-color);
+  color: white;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
 }
