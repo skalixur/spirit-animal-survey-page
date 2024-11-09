@@ -21,109 +21,146 @@
             personality.
           </p>
         </header>
-        <form action="#" id="spirit-animal-survey-form">
-          <label for="name" id="name-label">What's your name?</label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder="John Doe"
-            autocomplete="off"
-            required
-          />
 
-          <label for="outdoors-hours" id="outdoors-hours-label"
-            >On average, how many hours do you spend outdoors everyday?</label
+        <form action="#" id="spirit-animal-survey-form">
+          <div class="form-group">
+            <label for="name" id="name-label">What's your name?</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="John Doe"
+              autocomplete="off"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="outdoors-hours" id="outdoors-hours-label"
+              >On average, how many hours do you spend outdoors everyday?</label
+            >
+            <input
+              type="number"
+              name="outdoors-hours"
+              id="outdoors-hours"
+              min="1"
+              max="24"
+              step="1"
+              placeholder="6"
+              autocomplete="off"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="dropdown" id="dropdown-label"
+              >What's your favorite time of day?</label
+            >
+            <select name="dropdown" id="dropdown" required>
+              <option value="" selected disabled>Please select</option>
+              <option value="morning" required>Morning</option>
+              <option value="afternoon" required>Afternoon</option>
+              <option value="evening" required>Evening</option>
+              <option value="midnight" required>Midnight</option>
+            </select>
+          </div>
+
+          <fieldset
+            class="form-group form-fieldset"
+            form="spirit-animal-survey-form"
           >
-          <input
-            type="number"
-            name="outdoors-hours"
-            id="outdoors-hours"
-            min="1"
-            max="24"
-            step="1"
-            placeholder="6"
-            autocomplete="off"
-            required
-          />
-          <label for="dropdown" id="dropdown-label"
-            >What's your favorite time of day?</label
-          >
-          <select name="dropdown" id="dropdown" required>
-            <option value="" selected disabled>Please select</option>
-            <option value="morning" required>Morning</option>
-            <option value="afternoon" required>Afternoon</option>
-            <option value="evening" required>Evening</option>
-            <option value="midnight" required>Midnight</option>
-          </select>
-          <fieldset form="spirit-animal-survey-form">
             <legend>What type of environment do you prefer?</legend>
-            <input
-              type="radio"
-              name="environment"
-              value="forest"
-              id="forest"
-              required
-            />
-            <label for="forest">Forest</label><br />
-            <input
-              type="radio"
-              name="environment"
-              value="ocean"
-              id="ocean"
-              required
-            />
-            <label for="ocean">Ocean</label><br />
-            <input
-              type="radio"
-              name="environment"
-              value="mountains"
-              id="mountains"
-              required
-            />
-            <label for="mountains">Mountains</label><br />
+            <div class="input-group">
+              <input
+                type="radio"
+                name="environment"
+                value="forest"
+                id="forest"
+                required
+              />
+              <label for="forest">Forest</label>
+            </div>
+            <div class="input-group">
+              <input
+                type="radio"
+                name="environment"
+                value="ocean"
+                id="ocean"
+                required
+              />
+              <label for="ocean">Ocean</label>
+            </div>
+            <div class="input-group">
+              <input
+                type="radio"
+                name="environment"
+                value="mountains"
+                id="mountains"
+                required
+              />
+              <label for="mountains">Mountains</label>
+            </div>
           </fieldset>
 
-          <fieldset form="spirit-animal-survey-form">
+          <fieldset
+            class="form-group form-fieldset"
+            form="spirit-animal-survey-form"
+          >
             <legend>
               What qualities best describe you? (Select all that apply)
             </legend>
 
-            <input type="checkbox" name="qualities" id="friendly" required />
-            <label for="friendly">Friendly</label><br />
-
-            <input type="checkbox" name="qualities" id="independent" required />
-            <label for="independent">Independent</label><br />
-
-            <input type="checkbox" name="qualities" id="curious" required />
-            <label for="curious">Curious</label><br />
-
-            <input type="checkbox" name="qualities" id="loyal" required />
-            <label for="loyal">Loyal</label><br />
-
-            <input type="checkbox" name="qualities" id="playful" required />
-            <label for="playful">Playful</label><br />
-
-            <input type="checkbox" name="qualities" id="quiet" required />
-            <label for="quiet">Quiet</label><br />
+            <div class="input-group">
+              <input type="checkbox" name="qualities" id="friendly" />
+              <label for="friendly">Friendly</label>
+            </div>
+            <div class="input-group">
+              <input type="checkbox" name="qualities" id="independent" />
+              <label for="independent">Independent</label>
+            </div>
+            <div class="input-group">
+              <input type="checkbox" name="qualities" id="curious" />
+              <label for="curious">Curious</label>
+            </div>
+            <div class="input-group">
+              <input type="checkbox" name="qualities" id="loyal" />
+              <label for="loyal">Loyal</label>
+            </div>
+            <div class="input-group">
+              <input type="checkbox" name="qualities" id="playful" />
+              <label for="playful">Playful</label>
+            </div>
+            <div class="input-group">
+              <input type="checkbox" name="qualities" id="quiet" />
+              <label for="quiet">Quiet</label>
+            </div>
           </fieldset>
 
-          <label for="perfect-day"
-            >Describe your perfect day in a few sentences.</label
-          >
-          <textarea rows="2" name="perfect-day" id="perfect-day"></textarea>
+          <div class="form-group">
+            <label for="perfect-day"
+              >Describe your perfect day in a few sentences.</label
+            >
+            <textarea
+              class="perfect-day-textarea"
+              rows="2"
+              name="perfect-day"
+              id="perfect-day"
+            ></textarea>
+          </div>
 
-          <label for="email" id="email-label"
-            >Enter your email to get your personalized animal match!</label
-          >
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="johndoe@example.com"
-            required
-          />
-          <button type="submit">Submit</button>
+          <div class="form-group">
+            <label for="email" id="email-label"
+              >Enter your email to get your personalized animal match!</label
+            >
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="johndoe@example.com"
+              required
+            />
+          </div>
+          <button class="submit-button" type="submit">Submit</button>
         </form>
       </div>
     </main>
